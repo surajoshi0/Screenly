@@ -1,0 +1,14 @@
+{
+  "name": "screenly",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Screenly – screen recording and screenshot capture (static frontend)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173 --strictPort"
+  },
+  "devDependencies": {
+    "vite": "^7.1.4"
+  }
+}

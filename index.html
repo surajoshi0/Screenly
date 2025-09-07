@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screenly — Screen Recorder & Screenshots</title>
+  <meta name="description" content="Screenly lets you record your screen and capture screenshots right in your browser.">
+  <link rel="stylesheet" href="css/screenly.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">🎥</div>
+      <h1 class="title">Screenly</h1>
+    </div>
+    <p class="subtitle">Record your screen and capture crisp screenshots — locally, privately.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Recorder Controls">
+      <div class="control-row">
+        <button id="btnStart" class="btn primary">Start Recording</button>
+        <button id="btnPause" class="btn" disabled>Pause</button>
+        <button id="btnResume" class="btn" disabled>Resume</button>
+        <button id="btnStop" class="btn danger" disabled>Stop & Save</button>
+      </div>
+      <div class="control-row options">
+        <label class="opt">
+          <input id="optMic" type="checkbox">
+          <span>Include microphone</span>
+        </label>
+        <label class="opt">
+          <span>Framerate</span>
+          <select id="optFps">
+            <option value="30">30 fps</option>
+            <option value="60" selected>60 fps</option>
+          </select>
+        </label>
+        <label class="opt">
+          <span>Countdown</span>
+          <select id="optCountdown">
+            <option value="0">None</option>
+            <option value="3" selected>3s</option>
+            <option value="5">5s</option>
+          </select>
+        </label>
+        <div class="timer" id="liveTimer" aria-live="polite">00:00</div>
+      </div>
+      <div class="control-row">
+        <button id="btnScreenshot" class="btn" disabled>Capture Screenshot</button>
+        <button id="btnDownloadLast" class="btn" disabled>Download Last Video</button>
+        <button id="btnClearGallery" class="btn ghost" disabled>Clear Gallery</button>
+      </div>
+      <div class="hints">
+        <span>Tip: On the share picker, check "Share system audio" if you need it.</span>
+      </div>
+    </section>
+
+    <section class="preview" aria-label="Live Preview">
+      <video id="preview" playsinline autoplay muted></video>
+      <div id="status" role="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section class="gallery" aria-label="Gallery">
+      <h2>Gallery</h2>
+      <div id="galleryGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>All processing happens in your browser. Nothing is uploaded.</span>
+  </footer>
+
+  <script type="module" src="/js/screenly.js"></script>
+</body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none"></svg>
+</html>
+
+
