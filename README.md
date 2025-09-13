@@ -1,4 +1,4 @@
-# 📺 Screenly - Screen Recorder  
+# 📺 Screenly - Smart Screen Recorder  
 
 Screenly is a lightweight and easy-to-use screen recording application that lets you capture your screen with just a few clicks. Whether you want to create tutorials, record gameplay, or save online meetings, Screenly has you covered. 🎥✨  
 
